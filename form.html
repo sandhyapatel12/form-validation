@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form validation</title>
+    <link rel="stylesheet" href="./output.css">
+
+    <!--font awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    
+    <!--start main div-->
+    <main class="bg-slate-100 flex flex-col items-center justify-center px-6 py-10 mx-auto md:h-screen lg:py-0"> 
+
+        <!--start inner div-->
+        <div class="w-full bg-slate-50 rounded-lg shadow-xl p-4  space-y-3 sm:max-w-md  md:space-y-6 sm:p-8">
+                
+                <h1 class=" font-bold text-xl py-2 px-6 bg-slate-600 rounded-lg text-white w-full">REGISTRATION FORM</h1>
+
+                <form class="space-y-4" action="#"  name="myForm" onsubmit="return validateForm()" id="formInfo">
+
+                    <div id="name">
+                        <label for="name" class="block mb-2 text-lg font-medium text-gray-900 dark:text-white">Your Name:</label>
+                        <input type="text" id="fname" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="enter your full name" required="">
+                        <span class="errorMsg"></span>
+                    </div>
+
+                    
+
+                    <div id="email">
+                        <label for="email" class="block mb-2 text-lg font-medium text-gray-900 dark:text-white">Your Email:</label>
+                        <input type="text" id="femail" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="enter your email" required="">
+                        <span class="errorMsg"></span>
+                    </div>
+
+                    <div id="phone">
+                        <label for="phone" class="block mb-2 text-lg font-medium text-gray-900 dark:text-white">Mobile No:</label>
+                        <input type="number" id="fphone" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="enter mobile no" required="" >
+                        <span class="errorMsg"></span>
+                    </div>
+
+                    <div id="password">
+                        <label for="password" class="block mb-2 text-lg font-medium text-gray-900 dark:text-white">Password:</label>
+                        <input type="password" id="fpassword" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="enter your password" required="" >
+                        <span class="errorMsg"></span>
+                    </div>
+
+                    <button class="btn bg-gray-600 px-4 py-2 rounded-md text-white font-medium w-full">SUBMIT</button>
+
+
+                </form>
+
+            
+        </div>      <!--end of inner div -->
+    </main>
+    <!--end of main-->
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
+    <script src="script.js"></script>
+</body>
+</html>
